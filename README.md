@@ -10,7 +10,7 @@ Hi, I'm **Chandrasri Teja Gunapalli**, a **Power BI Analyst** with over **2+ yea
 ### 1️⃣ Sales Dashboard
 **🔹 Description:** An interactive dashboard analyzing sales performance and trends over time.
 **🔹 Skills Used:** Power BI, DAX, SQL, Power Query  
-**🔹 [View Project](#)**
+**🔹 [View Project](portfolio.html)**
 
 ### 2️⃣ Customer Retention Analysis
 **🔹 Description:** Analyzed customer churn data to help businesses retain clients.  
