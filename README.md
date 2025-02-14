@@ -1,16 +1,39 @@
-## Hi there 👋
+# 🚀 Power BI Portfolio
 
-<!--
-**teja0712/teja0712** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Welcome to my **Power BI Portfolio**! This repository showcases my expertise in **Power BI, DAX, SQL, and Data Visualization**. I have included interactive dashboards and data projects that demonstrate my ability to transform data into actionable insights.
 
-Here are some ideas to get you started:
+## 📌 About Me
+Hi, I'm **Chandrasri Teja Gunapalli**, a **Power BI Analyst** with over **2+ years of experience** in building dynamic dashboards, optimizing data models, and leveraging Power BI to enhance business intelligence.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 📊 Featured Projects
+
+### 1️⃣ Sales Dashboard
+**🔹 Description:** An interactive dashboard analyzing sales performance and trends over time.
+**🔹 Skills Used:** Power BI, DAX, SQL, Power Query  
+**🔹 [View Project](#)**
+
+### 2️⃣ Customer Retention Analysis
+**🔹 Description:** Analyzed customer churn data to help businesses retain clients.  
+**🔹 Skills Used:** Power BI, Data Modeling, Customer Segmentation  
+**🔹 [View Project](#)**
+
+### 3️⃣ Financial Reporting Dashboard
+**🔹 Description:** Designed an interactive financial summary dashboard for better decision-making.  
+**🔹 Skills Used:** Power BI, Data Analysis, KPI Metrics  
+**🔹 [View Project](#)**
+
+## 🔧 Technical Skills
+✔ Power BI Desktop & Power BI Service  
+✔ DAX (Data Analysis Expressions)  
+✔ Power Query & Data Transformation  
+✔ SQL & Database Management  
+✔ Data Visualization & Storytelling  
+✔ Performance Optimization in Power BI  
+✔ Row-Level Security (RLS) & Power BI Administration  
+
+## 📩 Contact Me
+📧 **Email:** chandrasri998@gmail.com  
+🔗 **LinkedIn:** [My Profile](https://www.linkedin.com)  
+🐙 **GitHub:** [My GitHub](https://github.com)  
+
+🚀 Feel free to explore my projects and connect with me!
