@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Portfolio - Chandra Sri</title>
+    <link rel="stylesheet" href="D:\styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Chandra Sri - Power BI Portfolio</h1>
+        <p>Email: chandrasri998@gmail.com | Phone: +91 7997792552 | Location: Hyderabad, TS</p>
+    </header>
+
+    <section id="professional-summary">
+        <h2>Professional Summary</h2>
+        <p>
+            Results-driven Power BI Analyst with 2+ years of experience in designing interactive dashboards, optimizing business intelligence solutions, and enabling data-driven decision-making. Proficient in DAX, Power Query, and SQL.
+        </p>
+    </section>
+
+    <section id="professional-experience">
+        <h2>Professional Experience</h2>
+        <div class="experience">
+            <h3>Project Engineer | Data Analyst - Power BI</h3>
+            <p><strong>Wipro Technologies</strong> | Hyderabad, TS | Oct 2021 - Apr 2024</p>
+            <ul>
+                <li>Developed 15+ dynamic Power BI dashboards, reducing manual reporting efforts by 40%.</li>
+                <li>Optimized Power BI reports, cutting dashboard load time by 60%.</li>
+                <li>Integrated SQL and Excel data sources for real-time accuracy.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="technical-skills">
+        <h2>Technical Skills</h2>
+        <canvas id="skillsChart" width="400" height="200"></canvas>
+        <script>
+            const ctx = document.getElementById('skillsChart').getContext('2d');
+            const skillsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Power BI', 'DAX', 'Power Query', 'SQL', 'Data Visualization'],
+                    datasets: [{
+                        label: 'Skill Proficiency',
+                        data: [90, 85, 80, 75, 90],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </section>
+
+    <section id="education-certifications">
+        <h2>Education & Certifications</h2>
+        <ul>
+            <li><strong>Bachelor of Technology (B.Tech), Computer Science & Engineering</strong> - Godavari Institute of Engineering and Technology, Rajahmundry | Graduation Year: 2020 | GPA: 7.2/10</li>
+            <li><strong>Microsoft Certified: Power BI Data Analyst Associate</strong></li>
+            <li><strong>Full Stack Java Certification - NIIT</strong></li>
+        </ul>
+    </section>
+
+    <section id="key-achievements">
+        <h2>Key Achievements & Strengths</h2>
+        <ul>
+            <li>Developed Power BI dashboards that reduced reporting time by 40%.</li>
+            <li>Optimized data models, reducing report load times by 60%.</li>
+            <li>Integrated multiple data sources (SQL, Excel, APIs), ensuring real-time accuracy.</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>1. Sales Performance Dashboard</h3>
+            <p><strong>Description</strong>: A dynamic dashboard to analyze sales performance across regions and products.</p>
+            <p><strong>Key Features</strong>:</p>
+            <ul>
+                <li>Interactive filters for region, product, and time period.</li>
+                <li>Key metrics: Total sales, profit margins, top-performing products.</li>
+                <li>Visuals: Bar charts, line charts, and maps.</li>
+            </ul>
+            <iframe title="Profit Analysis - Report 2 - USER48" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDU0YmJmYTQtYjRlYi00ZDZhLThiYzctM2FlMWMyNzBmYjQ0IiwidCI6IjM4MWU2MDQ5LTVjYjYtNDVlZi1hYzdiLWNmYTZlYzcwZmM5NCJ9" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+        <div class="project">
+            <h3>2. HR Analytics Dashboard</h3>
+            <p><strong>Description</strong>: A dashboard to analyze employee attrition, performance, and demographics.</p>
+            <p><strong>Key Features</strong>:</p>
+            <ul>
+                <li>Employee turnover analysis.</li>
+                <li>Diversity and inclusion metrics.</li>
+                <li>Visuals: Donut charts, scatter plots, and slicers.</li>
+            </ul>
+            <iframe width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiYOUR_EMBED_CODE_HERE" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+        <div class="project">
+            <h3>3. COVID-19 Tracker</h3>
+            <p><strong>Description</strong>: A global tracker for COVID-19 cases, deaths, and vaccinations.</p>
+            <p><strong>Key Features</strong>:</p>
+            <ul>
+                <li>Time-series analysis of cases and vaccinations.</li>
+                <li>Visuals: Maps, line charts, and slicers.</li>
+            </ul>
+            <iframe width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiYOUR_EMBED_CODE_HERE" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Chandra Sri. All rights reserved.</p>
+    </footer>
+</body>
+</html>
