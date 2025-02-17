@@ -141,28 +141,32 @@
     const accessToken = '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'; // Replace with your token
 
     fetch(`https://api.github.com/repos/${githubUsername}/${repoName}/issues`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `token ${accessToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        if (result.id) {
-          document.getElementById('formResponse').textContent =
-            'Thank you! Your message has been sent.';
-        } else {
-          document.getElementById('formResponse').textContent =
-            'Oops! Something went wrong. Please try again.';
-        }
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        document.getElementById('formResponse').textContent =
-          'Oops! Something went wrong. Please try again.';
-      });
+  method: 'POST',
+  headers: {
+    'Authorization': `token ${accessToken}`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+  .then((response) => {
+    console.log('Response:', response); // Log the response
+    return response.json();
+  })
+  .then((result) => {
+    console.log('Result:', result); // Log the result
+    if (result.id) {
+      document.getElementById('formResponse').textContent =
+        'Thank you! Your message has been sent.';
+    } else {
+      document.getElementById('formResponse').textContent =
+        'Oops! Something went wrong. Please try again.';
+    }
+  })
+  .catch((error) => {
+    console.error('Error:', error); // Log the error
+    document.getElementById('formResponse').textContent =
+      'Oops! Something went wrong. Please try again.';
+  });    
   });
 </script>
 </html>
