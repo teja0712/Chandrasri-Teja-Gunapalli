@@ -208,3 +208,10 @@ footer {
   text-align: center;
   padding: 20px;
 }
+/* Form Response Message */
+.form-response {
+  margin-top: 10px;
+  color: #007BFF;
+  font-weight: bold;
+  text-align: center;
+}
