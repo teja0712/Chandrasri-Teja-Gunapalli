@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandrasri Teja Gunapalli - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h1>Chandrasri Teja Gunapalli</h1>
+      <p>Data Analyst | Power BI Specialist</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="profile.jpg" alt="Chandrasri Teja Gunapalli">
+      <p>
+        I am a passionate Data Analyst with 2+ years of experience in creating interactive dashboards and transforming raw data into actionable insights. I specialize in Power BI, DAX, and SQL, and have a proven track record of delivering data-driven solutions that empower businesses to make informed decisions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <span>Power BI</span>
+        <div class="progress-bar" style="width: 90%;"></div>
+      </div>
+      <div class="skill">
+        <span>DAX</span>
+        <div class="progress-bar" style="width: 85%;"></div>
+      </div>
+      <div class="skill">
+        <span>Power Query</span>
+        <div class="progress-bar" style="width: 80%;"></div>
+      </div>
+      <div class="skill">
+        <span>SQL</span>
+        <div class="progress-bar" style="width: 75%;"></div>
+      </div>
+      <div class="skill">
+        <span>Data Modeling</span>
+        <div class="progress-bar" style="width: 70%;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Sales Performance Dashboard</h3>
+        <p>Developed an interactive dashboard to track sales performance across regions, resulting in a 20% improvement in decision-making speed.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Customer Segmentation Analysis</h3>
+        <p>Created a customer segmentation model to identify high-value customers, leading to a 15% increase in targeted marketing efficiency.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Financial Reporting Dashboard</h3>
+        <p>Designed a financial reporting dashboard for real-time tracking of revenue and expenses, improving reporting efficiency by 30%.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:chandrasri998@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Chandrasri Teja Gunapalli. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Smooth Scrolling -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
