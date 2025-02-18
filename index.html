@@ -68,78 +68,52 @@
   </section>
 
   <!-- Projects Section -->
-  <!-- Projects Section -->
-<section id="projects" class="projects-section">
-  <h2>Projects</h2>
-  <div class="projects-container">
-    <div class="project-card">
-      <h3>Sales Performance Dashboard</h3>
-      <p>Developed an interactive dashboard to track sales performance across regions, resulting in a 20% improvement in decision-making speed.</p>
-      <a href="sales-performance.html" class="btn">View Project</a>
+  <section id="projects" class="projects-section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Sales Performance Dashboard</h3>
+        <p>Developed an interactive dashboard to track sales performance across regions, resulting in a 20% improvement in decision-making speed.</p>
+        <a href="sales-performance.html" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Customer Segmentation Analysis</h3>
+        <p>Created a customer segmentation model to identify high-value customers, leading to a 15% increase in targeted marketing efficiency.</p>
+        <a href="customer-segmentation.html" class="btn">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Financial Reporting Dashboard</h3>
+        <p>Designed a financial reporting dashboard for real-time tracking of revenue and expenses, improving reporting efficiency by 30%.</p>
+        <a href="financial-reporting.html" class="btn">View Project</a>
+      </div>
     </div>
-    <div class="project-card">
-      <h3>Customer Segmentation Analysis</h3>
-      <p>Created a customer segmentation model to identify high-value customers, leading to a 15% increase in targeted marketing efficiency.</p>
-      <a href="customer-segmentation.html" class="btn">View Project</a>
-    </div>
-    <div class="project-card">
-      <h3>Financial Reporting Dashboard</h3>
-      <p>Designed a financial reporting dashboard for real-time tracking of revenue and expenses, improving reporting efficiency by 30%.</p>
-      <a href="financial-reporting.html" class="btn">View Project</a>
-    </div>
-  </div>
-</section>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <h2>Contact Me</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
+    <form id="contactForm" action="https://formspree.io/f/xqaegnjn" method="POST" class="contact-form">
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+      <textarea name="message" id="message" placeholder="Your Message" required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
+    <div id="form-message"></div> <!-- Message will be displayed here -->
     <div class="social-links">
       <a href="https://www.linkedin.com/in/chandrasri-teja-gunapalli-211a632aa/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/teja0712/Chandrasri-Teja-Gunapalli" target="_blank"><i class="fab fa-github"></i></a>
       <a href="mailto:chandrasri998@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
   </section>
-  <script>
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent default form submission
-
-    const form = e.target;
-    const formResponse = document.getElementById('formResponse');
-
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json',
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          formResponse.textContent = 'Thank you! Your message has been sent.';
-          form.reset(); // Clear the form
-        } else {
-          formResponse.textContent = 'Oops! Something went wrong. Please try again.';
-        }
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        formResponse.textContent = 'Oops! Something went wrong. Please try again.';
-      });
-  });
-</script>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2024 Chandrasri Teja Gunapalli. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Smooth Scrolling -->
+  <!-- JavaScript for Smooth Scrolling and Form Submission -->
   <script>
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -148,6 +122,74 @@
         });
       });
     });
+
+    // Form submission handling
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault(); // Prevent the form from submitting the traditional way
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const submitButton = form.querySelector('button[type="submit"]');
+      const messageDiv = document.getElementById('form-message');
+
+      // Disable the submit button to prevent multiple submissions
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+
+      try {
+        // Send the form data to Formspree
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Display success message
+          messageDiv.innerHTML = `
+            <p class="success-message">Thank you! Your message has been sent successfully.</p>
+          `;
+          form.reset(); // Clear the form
+        } else {
+          // Display error message
+          const data = await response.json();
+          if (data.errors) {
+            messageDiv.innerHTML = `
+              <p class="error-message">Error: ${data.errors.map(error => error.message).join(', ')}</p>
+            `;
+          } else {
+            messageDiv.innerHTML = `
+              <p class="error-message">Oops! Something went wrong. Please try again later.</p>
+            `;
+          }
+        }
+      } catch (error) {
+        // Display error message
+        messageDiv.innerHTML = `
+          <p class="error-message">Oops! Something went wrong. Please try again later.</p>
+        `;
+      } finally {
+        // Re-enable the submit button
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+      }
+    });
   </script>
+
+  <!-- Optional: Add CSS for the success and error messages -->
+  <style>
+    .success-message {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .error-message {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
 </body>
 </html>
